@@ -7,11 +7,16 @@ plugins {
 repositories {
     mavenCentral()
 }
+buildscript {
+    dependencies{
+        classpath 'org.jbake:jbake-gradle-plugin:5.0.0'
 
+    }
+}
 dependencies {
     testImplementation 'org.hamcrest:hamcrest-library:2.2'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
-    classpath 'org.jbake:jbake-gradle-plugin:5.0.0'
+    
 }
 
 test {
