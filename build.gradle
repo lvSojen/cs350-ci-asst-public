@@ -8,9 +8,8 @@ repositories {
     mavenCentral()
 }
 buildscript {
-    dependencies{
-        classpath 'org.jbake:jbake-gradle-plugin:5.0.0'
-
+    dependencies {
+        classpath "org.jbake:jbake-gradle-plugin:5.0.0"
     }
 }
 dependencies {
