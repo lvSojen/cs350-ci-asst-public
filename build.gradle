@@ -22,6 +22,9 @@ test {
 
 def websiteRepo='git@github.com:Old-Dominion-Univ-CS-Dept/cs350-ci-asst-lvSojen.git'
 
+jbake {
+	 srcDirName = "build/report"
+}
 task clearPages(type: Delete) {
     delete 'build/gh-pages'
 }
@@ -62,6 +65,14 @@ task updateGHPages (dependsOn: 'copyWebsite') {
         exec {
             workingDir = 'build/gh-pages'
             commandLine = ['git', 'push']
+        }
+    }
+}
+
+task copywReports (dependsOn: ['bake', 'clonePages']) {  
+    doLast {
+        ant.copy (todir: 'build/gh-pages') {
+            fileset(dir: 'build/jbake')
         }
     }
 }
