@@ -22,9 +22,6 @@ test {
 
 def websiteRepo='git@github.com:Old-Dominion-Univ-CS-Dept/cs350-ci-asst-lvSojen.git'
 
-jbake {
-	 srcDirName = "build/report"
-}
 task clearPages(type: Delete) {
     delete 'build/gh-pages'
 }
