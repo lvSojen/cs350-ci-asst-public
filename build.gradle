@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+    id 'project-report'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.hamcrest:hamcrest-library:2.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+}
+
+test {
+    ignoreFailures = true
+    useJUnitPlatform()
+}
